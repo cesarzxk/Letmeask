@@ -15,9 +15,15 @@ const firebaseConfig = {
   };
 
 
-firebase.initializeApp(firebaseConfig)
+try{
+  firebase.initializeApp(firebaseConfig)
+  
+}catch (e){
+  console.log(`Erro ${e}`)
 
+}
 
 export const auth = firebase.auth()
 
 export const database = firebase.database()
+
