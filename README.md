@@ -1,2 +1,2 @@
 # Letmeask
- Projeto da semana NLW#6: Together
+ Projeto da semana NLW Together
