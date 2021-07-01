@@ -7,12 +7,14 @@ import Button from '../components/button'
 
 
 import {useHistory} from 'react-router-dom'
-import { useContext } from 'react'
+import { FormEvent, useContext, useState } from 'react'
 import { AuthContext } from '../context/AuthContext'
+import { database } from '../services/firebase'
 
 export default function Home(){
     const {signInWithGoogle,user} = useContext(AuthContext);
     const history = useHistory()
+    const [roomCode, setRoomCode] = useState<string>('')
 
 
     async function handleCreateRoom(){
@@ -21,6 +23,23 @@ export default function Home(){
         }
         
         history.push('/rooms/new')
+    }
+
+    async function handleJoinRoom(event: FormEvent){
+        event.preventDefault()
+
+        if (roomCode.trim() === ''){
+            return;
+        }
+
+        const roomRef = await database.ref(`rooms/${roomCode}`).get();
+
+        if(!roomRef.exists()){
+            alert('Room does not exists.')
+            return;
+        }
+
+        history.push(`/rooms/${roomCode}`);
     }
 
 
@@ -39,8 +58,10 @@ export default function Home(){
                     Crie sua sala com o google
                 </button>
                 <div className='separator'>ou entre em uma sala</div>
-                <form action="">
-                    <input 
+                <form onSubmit={handleJoinRoom}>
+                    <input
+                        value={roomCode}
+                        onChange={event => setRoomCode(event.target.value)}
                         type="text" 
                         name="" 
                         id="" 
