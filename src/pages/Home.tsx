@@ -4,8 +4,6 @@ import googleLogoIcon from '../assets/images/google-icon.svg'
 import '../styles/auth.scss'
 import Button from '../components/button'
 
-
-
 import {useHistory} from 'react-router-dom'
 import { FormEvent, useContext, useState } from 'react'
 import { AuthContext } from '../context/AuthContext'
@@ -76,7 +74,6 @@ export default function Home(){
                 </form>
             </div>
         </main>
-
     </div>
     )
 }

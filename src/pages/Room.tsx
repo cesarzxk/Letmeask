@@ -66,6 +66,9 @@ export default function Room(){
     
     return(
         <div id='page-room'>
+            <section>
+                
+            </section>
             <header>
                 <div className='content'>
                     <img src={logoImg} alt="Letmeask"/>
@@ -105,8 +108,13 @@ export default function Room(){
                                 <Question 
                                 key={question.id}
                                 auth={question.author} 
-                                content={question.content}>
-        
+                                content={question.content}
+                                isAnswered={question.isAnswered}
+                                isHighlighted={question.isHighlighted}
+                                >
+                                    
+                                { !question.isAnswered &&
+                                    
                                     <button 
                                     onClick={()=>handlerLikeQuestion(question.id, question.likeId)}
                                     className={`like-button ${question.likeId ? 'liked':''}`}
@@ -120,6 +128,8 @@ export default function Room(){
                                         </svg>
 
                                     </button>
+                                    
+                                    }
 
                                 </Question>
                             )

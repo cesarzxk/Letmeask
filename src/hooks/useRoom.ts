@@ -8,11 +8,12 @@ type FirebaseQuestionsProps = Record<string , {
         avatar:string
     }
     content:string;
-    isAnswered:boolean;
-    isHighlighted:boolean;
+    isAnswered?:boolean;
+    isHighlighted?:boolean;
     likes: Record<string, {
         authorId:string;
     }>
+    
 }>
 
 type QuestionProps={
@@ -22,8 +23,8 @@ type QuestionProps={
         avatar:string
     }
     content:string;
-    isAnswered:boolean;
-    isHighlighted:boolean;
+    isAnswered?:boolean;
+    isHighlighted?:boolean;
     likeCount:number;
     likeId:string | undefined;
 
