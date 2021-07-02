@@ -1,4 +1,4 @@
-import { FormEvent, useContext, useEffect, useState } from 'react';
+import { FormEvent, useContext, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import logoImg from '../assets/images/logo.svg';
 import Button from '../components/button';
@@ -10,14 +10,11 @@ import '../styles/room.scss';
 import useRoom from '../hooks/useRoom';
 
 
-
-
-
 type RoomParamsProps ={
     id:string;
 }
 
-export default function Room(){
+export default function AdminRoom(){
     const {user} = useContext(AuthContext);
     const params =useParams<RoomParamsProps>()
     const [newQuestion, setNewQuestion] = useState<string>('')
@@ -54,7 +51,10 @@ export default function Room(){
             <header>
                 <div className='content'>
                     <img src={logoImg} alt="Letmeask"/>
-                    <RoomCode code={params.id}/>
+                    <div>
+                        <RoomCode code={params.id}/>
+                        <Button isOutlined >Encerrar sala</Button>
+                    </div>
                 </div>
             </header>
 
@@ -64,24 +64,6 @@ export default function Room(){
                     {questions.length>0 && (<span>{questions.length} perguntas</span>)}
                     
                 </div>
-
-                <form onSubmit={handleSendQuestion}>
-                    <textarea onChange={event => setNewQuestion(event.target.value)} value={newQuestion} placeholder='Q que você quer perguntar?'/>
-
-                    <div className='form-footer'>
-                        {user ? 
-                            (<div className='user-info'>
-
-                                <img src={user.avatar} alt={user.name} />
-                                <span>{user.name}</span>
-
-                            </div>
-                        ):(
-                            <span>Para enviar uma pergunta <button>faça seu login</button>.</span>
-                        )}
-                        <Button disabled={!user} type='submit'>Enviar pergunta</Button>
-                    </div>
-                </form>
 
                 <div className="question-list">
                     {

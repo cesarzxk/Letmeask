@@ -11,6 +11,15 @@
             > img{
                 max-height: 45px;
             }
+
+            > div{
+                display: flex;
+                gap: 16px;
+
+                button{
+                    height: 40px;
+                }
+            }
         }
     }
     main{
@@ -87,10 +96,11 @@
                     font-weight: 500;
                     cursor: pointer;
                     }
-                
-            }
+                }
             }
         }
-
+        .question-list{
+            margin-top: 32px;
+        }
     }
 }
