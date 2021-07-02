@@ -1,3 +1,4 @@
+import { ReactNode } from 'react';
 import '../styles/question.scss';
 
 type QuestionProps ={
@@ -6,11 +7,13 @@ type QuestionProps ={
         name:string;
         avatar:string;
     }
+    children?:ReactNode;
 }
 
 export default function Question({
     content,
-    auth
+    auth,
+    children,
 }:QuestionProps){
 
     return(
@@ -21,7 +24,9 @@ export default function Question({
                     <img src={auth.avatar} alt={auth.name} />
                     <span>{auth.name}</span>
                 </div>
-                <div></div>
+                <div>
+                    {children}
+                </div>
             </footer>
         </div>
     )
