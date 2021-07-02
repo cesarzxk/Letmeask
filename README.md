@@ -1,6 +1,3 @@
-# Letmeask
- Projeto da semana NLW Together
-
 <h1 align="center">
   <img alt="Logo" src="" width="150px">
 
