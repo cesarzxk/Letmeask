@@ -74,7 +74,7 @@ Technologies that I used to develop this web application
 - [NodeJS](https://nodejs.org/en/)
 - [TypeScript](https://www.typescriptlang.org/)
 - [Firebase](https://firebase.google.com/?hl=pt)
-- [classnames](https://www.npmjs.com/package/classnames)
+- [Classnames](https://www.npmjs.com/package/classnames)
 
 ## 💻 Getting started
 
