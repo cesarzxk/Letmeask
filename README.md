@@ -1,30 +1,30 @@
 <h1 align="center">
-  <img alt="Logo" src="https://user-images.githubusercontent.com/43748428/124055178-ccbdb180-d9f9-11eb-8c31-c5d96f03c47e.png" width="250px">
+  <img alt="Logo" src="https://user-images.githubusercontent.com/43748428/124530727-75e21e80-dde3-11eb-82ac-4faff772babc.png" width="250px">
 
 <h3 align="center">
   The React app for Letmeask.
 </h3>
 
-<p align="center">Ask-me too easily</p>
+<p align="center">Ask-me too easily.</p>
 
 <p align="center">
   
-  <img alt="Repository size" src="https://img.shields.io/github/repo-size/cesarzxk/Letmeask?color=835afd">
+  <img alt="Repository size" src="https://img.shields.io/github/repo-size/cesarzxk/Letmeask?color=ea3535">
 
   <a href="https://github.com/cesarzxk/Letmeask/network">
-    <img alt="GitHub forks" src="https://img.shields.io/github/forks/cesarzxk/Letmeask?color=835afd">
+    <img alt="GitHub forks" src="https://img.shields.io/github/forks/cesarzxk/Letmeask?color=ea3535">
   </a>
   
   <a href="https://github.com/cesarzxk/Letmeask/issues">
-    <img alt="GitHub issues" src="https://img.shields.io/github/issues/cesarzxk/Letmeask?color=835afd">
+    <img alt="GitHub issues" src="https://img.shields.io/github/issues/cesarzxk/Letmeask?color=ea3535">
   </a>
   
   <a href="https://github.com/cesarzxk/Letmeask/stargazers">
-    <img alt="GitHub stars" src="https://img.shields.io/github/stars/cesarzxk/Letmeask?color=835afd">
+    <img alt="GitHub stars" src="https://img.shields.io/github/stars/cesarzxk/Letmeask?color=ea3535">
   </a>
   
   <a href="https://github.com/cesarzxk/Letmeask/blob/main/LICENSE">
-    <img alt="GitHub license" src="https://img.shields.io/github/license/cesarzxk/Letmeask?color=835afd">
+    <img alt="GitHub license" src="https://img.shields.io/github/license/cesarzxk/Letmeask?color=ea3535">
   </a>
 
 </p>
@@ -46,21 +46,20 @@ This application was part of a challenge NLW:Together(Next Level Week) creating 
 
 ## 📸 Sreenshots
 
-Images of the application in operation.
-
+  
 <p align="center">
-<img alt="ScreenShot02" src="https://user-images.githubusercontent.com/43748428/124334414-65c10980-db6d-11eb-9d98-c06135f0d225.png" width="400px">
-<img alt="ScreenShot01" src="https://user-images.githubusercontent.com/43748428/124334435-6e194480-db6d-11eb-8f70-5512597992d6.png" width="400px">
+<img alt="ScreenShot02" src="https://user-images.githubusercontent.com/43748428/124530370-c6a54780-dde2-11eb-9be1-ca8aa895ca95.png" width="400px">
+<img alt="ScreenShot01" src="https://user-images.githubusercontent.com/43748428/124530309-a8d7e280-dde2-11eb-9b69-67c83789ee8d.png" width="400px">
 </p>
 
 <p align="center">
-<img alt="ScreenShot03" src="https://user-images.githubusercontent.com/43748428/124334444-72456200-db6d-11eb-9724-4eca59ad430b.png" width="400px">
-<img alt="ScreenShot04" src="https://user-images.githubusercontent.com/43748428/124334453-77a2ac80-db6d-11eb-82ae-4bb4170ace26.png" width="400px">
+<img alt="ScreenShot03" src="https://user-images.githubusercontent.com/43748428/124530387-cf961900-dde2-11eb-9b5c-99e0edd3094b.png" width="400px">
+<img alt="ScreenShot04" src="https://user-images.githubusercontent.com/43748428/124530393-d15fdc80-dde2-11eb-991c-7dacf1c853c8.png" width="400px">
 </p>
 
 <p align="center">
-<img alt="ScreenShot05" src="https://user-images.githubusercontent.com/43748428/124334457-7a9d9d00-db6d-11eb-8863-2189d25a1a70.png" width="400px">
-<img alt="ScreenShot06" src="https://user-images.githubusercontent.com/43748428/124334461-7cfff700-db6d-11eb-95fd-a5c32f7020ca.png" width="400px">
+<img alt="ScreenShot05" src="https://user-images.githubusercontent.com/43748428/124530400-d3c23680-dde2-11eb-8706-674a8670a761.png" width="400px">
+<img alt="ScreenShot06" src="https://user-images.githubusercontent.com/43748428/124530406-d58bfa00-dde2-11eb-853d-9855e2258140.png" width="400px">
 </p>
 
 
