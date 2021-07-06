@@ -21,7 +21,6 @@ type RoomParamsProps ={
 }
 
 export default function AdminRoom(){
-    //const {user} = useContext(AuthContext);
     const params =useParams<RoomParamsProps>()
     const {questions, title} = useRoom(params.id)
     const history = useHistory();

@@ -13,7 +13,6 @@ type FirebaseQuestionsProps = Record<string , {
     likes: Record<string, {
         authorId:string;
     }>
-    url:string;
     
 }>
 
@@ -51,12 +50,13 @@ export default function useRoom(roomId:string){
                     isHighlighted: value.isHighlighted,
                     isAnswered: value.isAnswered,
                     likeCount: Object.values(value.likes ?? {}).length,
-                    likeId: Object.entries(value.likes ?? {}).find(([key,like]) => like.authorId === user?.id)?.[0],
+                    likeId: Object.entries(value.likes ?? {}).find(([key,like]) => like.authorId === user?.id)?.[0]
                 }
             })
+            setUrl(databaseRoom.url)
             setTitle(databaseRoom.title);
             setQuestions(parsedQuestions);
-            setUrl(databaseRoom.url)
+            
         })
 
         return()=>{
