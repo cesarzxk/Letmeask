@@ -11,6 +11,7 @@ export default function NewRoom(){
     const[newRoom, setNewRoom] = useState<string>('')
     const{user} = useContext(AuthContext);
     const history = useHistory();
+    const [liveCode, setLiveCode] = useState<string>('')
 
     async function handleCreateRoom(event:FormEvent){
         event.preventDefault()
@@ -21,9 +22,10 @@ export default function NewRoom(){
         const roomRef = database.ref('rooms')
         const firebaseRoom = await roomRef.push({
             title: newRoom,
-            authorId:user?.id
+            authorId:user?.id,
+            url:liveCode
         })
-        
+
         history.push(`/rooms/${firebaseRoom.key}`)
     }
 
@@ -39,6 +41,7 @@ export default function NewRoom(){
                 <img src={logoImage} alt="LetmeAsk" />
                 <h2>Crie uma nova sala.</h2>
                 <form onSubmit={handleCreateRoom}>
+
                     <input 
                         type="text" 
                         name="" 
@@ -47,6 +50,16 @@ export default function NewRoom(){
                         value={newRoom}
                         placeholder='Nome da sala.'
                     />
+
+                    <input
+                        value={liveCode}
+                        onChange={event => setLiveCode(event.target.value)}
+                        type="text" 
+                        name="" 
+                        id="" 
+                        placeholder='Linke da sua live (opcional).'
+                    />
+
                     <Button type='submit'>Entrar na sala</Button>
                 </form>
                 <p>Quer entrar em alguma sala? <Link to='/'>click aqui.</Link></p>

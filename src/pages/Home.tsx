@@ -10,9 +10,11 @@ import { AuthContext } from '../context/AuthContext'
 import { database } from '../services/firebase'
 
 export default function Home(){
+
     const {signInWithGoogle,user} = useContext(AuthContext);
     const history = useHistory()
     const [roomCode, setRoomCode] = useState<string>('')
+
 
 
     async function handleCreateRoom(){
@@ -70,6 +72,7 @@ export default function Home(){
                         id="" 
                         placeholder='Digite o codigo da sala'
                     />
+    
                     <Button type='submit'>Entrar na sala</Button>
                 </form>
             </div>

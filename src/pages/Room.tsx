@@ -1,4 +1,4 @@
-import { FormEvent, useContext, useEffect, useState } from 'react';
+import { FormEvent, useContext, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import logoImg from '../assets/images/logo.svg';
 import Button from '../components/button';
@@ -10,18 +10,15 @@ import '../styles/room.scss';
 import useRoom from '../hooks/useRoom';
 
 
-
-
-
 type RoomParamsProps ={
     id:string;
 }
 
 export default function Room(){
     const {user} = useContext(AuthContext);
-    const params =useParams<RoomParamsProps>()
+    const params = useParams<RoomParamsProps>()
     const [newQuestion, setNewQuestion] = useState<string>('')
-    const {questions, title} = useRoom(params.id)
+    const {questions, title, url} = useRoom(params.id)
 
     async function handleSendQuestion(event: FormEvent){
         event.preventDefault()
@@ -50,7 +47,6 @@ export default function Room(){
     }
     
     async function handlerLikeQuestion(questionId:string, likeId:string | undefined){
-        console.log(likeId)
 
         if(likeId){
             await database.ref(`rooms/${params.id}/questions/${questionId}/likes/${likeId}`).remove()
@@ -63,18 +59,27 @@ export default function Room(){
         }
         
     }
+
+    function setVideo(){
+        return url.split('/')?.[3];
+
+    }
     
     return(
         <div id='page-room'>
-            <section>
-                
-            </section>
+            
             <header>
                 <div className='content'>
                     <img src={logoImg} alt="Letmeask"/>
                     <RoomCode code={params.id}/>
                 </div>
             </header>
+
+            {url &&
+            <section className='video'>
+                <iframe width="560" height="315" src={`https://www.youtube.com/embed/${setVideo()}`} allowFullScreen={true}/>
+            </section>
+            }
 
             <main>
                 <div className='room-title'>

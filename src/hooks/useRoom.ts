@@ -13,6 +13,7 @@ type FirebaseQuestionsProps = Record<string , {
     likes: Record<string, {
         authorId:string;
     }>
+    url:string;
     
 }>
 
@@ -32,8 +33,9 @@ type QuestionProps={
 
 export default function useRoom(roomId:string){
     const {user} = useContext(AuthContext);
-    const [questions, setQuestions] = useState<QuestionProps[]>([])
-    const [title, setTitle] = useState('')
+    const [questions, setQuestions] = useState<QuestionProps[]>([]);
+    const [title, setTitle] = useState<string>('');
+    const [url, setUrl] = useState<string>('');
 
     useEffect(()=>{
         const roomRef = database.ref(`rooms/${roomId}`);
@@ -49,11 +51,12 @@ export default function useRoom(roomId:string){
                     isHighlighted: value.isHighlighted,
                     isAnswered: value.isAnswered,
                     likeCount: Object.values(value.likes ?? {}).length,
-                    likeId: Object.entries(value.likes ?? {}).find(([key,like]) => like.authorId === user?.id)?.[0]
+                    likeId: Object.entries(value.likes ?? {}).find(([key,like]) => like.authorId === user?.id)?.[0],
                 }
             })
             setTitle(databaseRoom.title);
             setQuestions(parsedQuestions);
+            setUrl(databaseRoom.url)
         })
 
         return()=>{
@@ -62,5 +65,5 @@ export default function useRoom(roomId:string){
     },[roomId, user?.id])
 
 
-    return{questions, title}
+    return{questions, title, url}
 }

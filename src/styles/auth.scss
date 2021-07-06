@@ -5,7 +5,7 @@
 
     aside{
         flex: 7;
-        background-color: #835afd;
+        background-color: #ff2c2c;
         color:#fff;
 
         display: flex;
@@ -64,7 +64,12 @@
                 padding: 0 16px;
                 background-color: #fff;
                 border: 1px solid #a8a8b3;
+
+                &+input{
+                    margin-top: 10px;
+                }
             }
+
             button{
                 margin-top: 16px;
 
@@ -80,7 +85,7 @@
             margin-top: 16px;
 
             a{
-                color: #e559f9;
+                color: #f95959;
             }
 
         }
@@ -92,7 +97,7 @@
         border-radius: 8px;
 
         font-weight: 500;
-        background-color: #ea4335;
+        background-color: #ea3535;
         color:#fff;
 
         display: flex;
