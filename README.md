@@ -61,6 +61,13 @@ This application was part of a challenge NLW:Together(Next Level Week) creating 
   <img alt="ScreenShot05" src="https://user-images.githubusercontent.com/43748428/124530400-d3c23680-dde2-11eb-8706-674a8670a761.png" width="400px">
   <img alt="ScreenShot06" src="https://user-images.githubusercontent.com/43748428/124530406-d58bfa00-dde2-11eb-853d-9855e2258140.png" width="400px">
 </p>
+  
+<p align="center">
+  <img alt="ScreenShot05" src="https://user-images.githubusercontent.com/43748428/124797201-64eef580-df28-11eb-92de-39e5b56c8111.png" width="400px">
+  <img alt="ScreenShot06" src="https://user-images.githubusercontent.com/43748428/124797222-6b7d6d00-df28-11eb-9791-eea7baed794b.png" width="400px">
+</p>
+  
+  
 
 
 
