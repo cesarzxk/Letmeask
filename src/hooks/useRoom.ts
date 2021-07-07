@@ -35,6 +35,8 @@ export default function useRoom(roomId:string){
     const [questions, setQuestions] = useState<QuestionProps[]>([]);
     const [title, setTitle] = useState<string>('');
     const [url, setUrl] = useState<string>('');
+    const [adminUser, setAdminUser] = useState<string>('');
+    
 
     useEffect(()=>{
         const roomRef = database.ref(`rooms/${roomId}`);
@@ -56,6 +58,7 @@ export default function useRoom(roomId:string){
             setUrl(databaseRoom.url)
             setTitle(databaseRoom.title);
             setQuestions(parsedQuestions);
+            setAdminUser(databaseRoom.authorId)
             
         })
 
@@ -65,5 +68,5 @@ export default function useRoom(roomId:string){
     },[roomId, user?.id])
 
 
-    return{questions, title, url}
+    return{questions, title, url, adminUser}
 }

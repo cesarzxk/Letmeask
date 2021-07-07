@@ -11,9 +11,7 @@ import Question from '../components/Question';
 
 import '../styles/room.scss';
 import useRoom from '../hooks/useRoom';
-import { database } from '../services/firebase';
-
-
+import {database} from '../services/firebase';
 
 
 type RoomParamsProps ={
@@ -21,7 +19,8 @@ type RoomParamsProps ={
 }
 
 export default function AdminRoom(){
-    const params =useParams<RoomParamsProps>()
+
+    const params = useParams<RoomParamsProps>()
     const {questions, title} = useRoom(params.id)
     const history = useHistory();
 

@@ -26,7 +26,7 @@ export default function NewRoom(){
             url:liveCode
         })
 
-        history.push(`/rooms/${firebaseRoom.key}`)
+        history.push(`/rooms/admin/${firebaseRoom.key}`)
     }
 
     return(

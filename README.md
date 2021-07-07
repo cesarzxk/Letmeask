@@ -2,29 +2,29 @@
   <img alt="Logo" src="https://user-images.githubusercontent.com/43748428/124530727-75e21e80-dde3-11eb-82ac-4faff772babc.png" width="250px">
 
 <h3 align="center">
-  The React app for Letmeask.
+  The React app for letmeask.
 </h3>
 
 <p align="center">Ask-me too easily.</p>
 
 <p align="center">
   
-  <img alt="Repository size" src="https://img.shields.io/github/repo-size/cesarzxk/Letmeask?color=ea3535">
+  <img alt="Repository size" src="https://img.shields.io/github/repo-size/cesarzxk/letmeask?color=ea3535">
 
-  <a href="https://github.com/cesarzxk/Letmeask/network">
-    <img alt="GitHub forks" src="https://img.shields.io/github/forks/cesarzxk/Letmeask?color=ea3535">
+  <a href="https://github.com/cesarzxk/letmeask/network">
+    <img alt="GitHub forks" src="https://img.shields.io/github/forks/cesarzxk/letmeask?color=ea3535">
   </a>
   
-  <a href="https://github.com/cesarzxk/Letmeask/issues">
-    <img alt="GitHub issues" src="https://img.shields.io/github/issues/cesarzxk/Letmeask?color=ea3535">
+  <a href="https://github.com/cesarzxk/letmeask/issues">
+    <img alt="GitHub issues" src="https://img.shields.io/github/issues/cesarzxk/letmeask?color=ea3535">
   </a>
   
-  <a href="https://github.com/cesarzxk/Letmeask/stargazers">
-    <img alt="GitHub stars" src="https://img.shields.io/github/stars/cesarzxk/Letmeask?color=ea3535">
+  <a href="https://github.com/cesarzxk/letmeask/stargazers">
+    <img alt="GitHub stars" src="https://img.shields.io/github/stars/cesarzxk/letmeask?color=ea3535">
   </a>
   
-  <a href="https://github.com/cesarzxk/Letmeask/blob/main/LICENSE">
-    <img alt="GitHub license" src="https://img.shields.io/github/license/cesarzxk/Letmeask?color=ea3535">
+  <a href="https://github.com/cesarzxk/letmeask/blob/main/LICENSE">
+    <img alt="GitHub license" src="https://img.shields.io/github/license/cesarzxk/letmeask?color=ea3535">
   </a>
 
 </p>
@@ -86,7 +86,7 @@ Technologies that I used to develop this web application
 **Clone the project and access the folder**
 
 ```bash
-$ git clone https://github.com/cesarzxk/Letmeask.git
+$ git clone https://github.com/cesarzxk/letmeask.git
 ```
 
 **Follow the steps below**
@@ -111,7 +111,7 @@ After executed, open it in your browser localhost: 3000 or by clicking on the li
 # Fork using GitHub official command line
 # If you don't have the GitHub CLI, use the web site to do that.
 
-$ gh repo fork cesarzxk/Letmeask
+$ gh repo fork cesarzxk/letmeask
 
 ```
 
@@ -119,7 +119,7 @@ $ gh repo fork cesarzxk/Letmeask
 
 ```bash
 # Clone your fork
-$ git clone your-fork-url && cd Letmeask
+$ git clone your-fork-url && cd letmeask
 
 # Create a branch with your feature
 $ git checkout -b my-feature

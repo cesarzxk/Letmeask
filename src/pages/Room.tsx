@@ -77,7 +77,7 @@ export default function Room(){
 
             {url &&
             <section className='video'>
-                <iframe width="560" height="315" src={`https://www.youtube.com/embed/${setVideo()}`} allowFullScreen={true}/>
+                <iframe title='video' width="560" height="315" src={`https://www.youtube.com/embed/${setVideo()}`} allowFullScreen={true}/>
             </section>
             }
 
