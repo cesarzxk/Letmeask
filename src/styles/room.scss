@@ -10,6 +10,7 @@
             align-items: center;
             > img{
                 max-height: 45px;
+                cursor: pointer;
             }
 
             > div{
@@ -109,5 +110,36 @@
         .question-list{
             margin-top: 32px;
         }
+    }
+
+    .accessDenied{
+        display: flex;
+        flex-direction: column;
+
+        height: 100vh;
+
+        align-items: center;
+        justify-content: center;
+
+        
+
+        background: linear-gradient(to bottom right,#8d1818, #ff2c2c);
+
+        
+        cursor: pointer;
+
+        img{
+            height: 300px;
+            width: 300px;
+            filter: invert(1);
+
+        }
+        span{
+            color: white;
+            font-family: 'Poppins', sans-serif;
+            font-weight: bold;
+            font-size: 32px;
+        }
+
     }
 }

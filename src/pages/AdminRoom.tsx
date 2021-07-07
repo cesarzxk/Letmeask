@@ -12,17 +12,23 @@ import Question from '../components/Question';
 import '../styles/room.scss';
 import useRoom from '../hooks/useRoom';
 import {database} from '../services/firebase';
+import { useContext } from 'react';
+import { AuthContext } from '../context/AuthContext';
+
+import accessImg from '../assets/images/access.svg';
 
 
-type RoomParamsProps ={
+
+type RoomParamsProps = {
     id:string;
 }
 
 export default function AdminRoom(){
-
     const params = useParams<RoomParamsProps>()
-    const {questions, title} = useRoom(params.id)
+    const {questions, title, adminUser} = useRoom(params.id)
     const history = useHistory();
+    const {user, signInWithGoogle} = useContext(AuthContext);
+
 
     async function handleEndRoom(){
         await database.ref(`rooms/${params.id}`).update({
@@ -55,67 +61,76 @@ export default function AdminRoom(){
     
     return(
         <div id='page-room'>
-            <header>
-                <div className='content'>
-                    <img src={logoImg} alt="Letmeask"/>
-                    <div>
-                        <RoomCode code={params.id}/>
-                        <Button onClick={()=>handleEndRoom()} isOutlined >Encerrar sala</Button>
+            {(user?.id === adminUser)? ( 
+
+            <>
+                <header>
+                    <div className='content'>
+                        <img src={logoImg} onClick={()=>history.push('/')} alt="Letmeask"/>
+                        <div>
+                            <RoomCode code={params.id}/>
+                            <Button onClick={()=>handleEndRoom()} isOutlined >Encerrar sala</Button>
+                        </div>
                     </div>
-                </div>
-            </header>
+                </header>
 
-            <main>
-                <div className='room-title'>
-                    <h1>Sala {title}</h1>
-                    {questions.length>0 && (<span>{questions.length} perguntas</span>)}
+                <main>
+                    <div className='room-title'>
+                        <h1>Sala {title}</h1>
+                        {questions.length>0 && (<span>{questions.length} perguntas</span>)}
+                        
+                    </div>
+
+                    <div className="question-list">
+                        {
+                            questions.map(question=>{
+                                return (
+                                    <Question 
+                                    isAnswered={question.isAnswered}
+                                    isHighlighted={question.isHighlighted}
+                                    key={question.id}
+                                    auth={question.author} 
+                                    content={question.content}>
+
+                                        { !question.isAnswered &&
                     
+                                        <>
+                                            <button
+                                                type='button'
+                                                onClick={()=>{handleCheckQuestionAsAnswered(question.id)}}
+                                            >
+                                            <img src={checkImg} alt="Marcar como respondida." />
+                                            </button>
+
+                                            <button
+                                                type='button'
+                                                onClick={()=>{handleHighlightQuestion(question.id)}}
+                                            >
+                                                <img src={answerImg} alt="Dar destaque na pergunta.." />
+                                            </button>
+                                        </>
+                                        }
+
+                                        
+                                        <button
+                                            type='button'
+                                            onClick={()=>{handleDeleteQuestion(question.id)}}
+                                        >
+                                            <img src={deletImg} alt="Deletar pergunta." />
+                                        </button>
+
+                                    </Question>
+                                )
+                            })
+                        }
+                    </div> 
+                </main>
+            </>):(
+
+                <div onClick={signInWithGoogle} className='accessDenied'>
+                    <img src={accessImg} alt="Acesso não permitido."/>
+                    <span>Faça login para continuar.</span>
                 </div>
-
-                <div className="question-list">
-                    {
-                        questions.map(question=>{
-                            return (
-                                <Question 
-                                isAnswered={question.isAnswered}
-                                isHighlighted={question.isHighlighted}
-                                key={question.id}
-                                auth={question.author} 
-                                content={question.content}>
-
-                                    { !question.isAnswered &&
-                
-                                    <>
-                                        <button
-                                            type='button'
-                                            onClick={()=>{handleCheckQuestionAsAnswered(question.id)}}
-                                        >
-                                        <img src={checkImg} alt="Marcar como respondida." />
-                                        </button>
-
-                                        <button
-                                            type='button'
-                                            onClick={()=>{handleHighlightQuestion(question.id)}}
-                                        >
-                                            <img src={answerImg} alt="Dar destaque na pergunta.." />
-                                        </button>
-                                    </>
-                                    }
-
-                                    
-                                    <button
-                                        type='button'
-                                        onClick={()=>{handleDeleteQuestion(question.id)}}
-                                    >
-                                        <img src={deletImg} alt="Deletar pergunta." />
-                                    </button>
-
-                                </Question>
-                            )
-                        })
-                    }
-                </div> 
-            </main>
-            
+            )}
         </div>)
 }

@@ -1,5 +1,5 @@
 import { FormEvent, useContext, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { useHistory, useParams } from 'react-router-dom';
 import logoImg from '../assets/images/logo.svg';
 import Button from '../components/button';
 import RoomCode from '../components/RoomCode';
@@ -15,10 +15,11 @@ type RoomParamsProps ={
 }
 
 export default function Room(){
-    const {user} = useContext(AuthContext);
+    const {user, signInWithGoogle} = useContext(AuthContext);
     const params = useParams<RoomParamsProps>()
     const [newQuestion, setNewQuestion] = useState<string>('')
     const {questions, title, url} = useRoom(params.id)
+    const history = useHistory()
 
     async function handleSendQuestion(event: FormEvent){
         event.preventDefault()
@@ -70,7 +71,7 @@ export default function Room(){
             
             <header>
                 <div className='content'>
-                    <img src={logoImg} alt="Letmeask"/>
+                    <img onClick={()=>history.push('/')} src={logoImg} alt="Letmeask"/>
                     <RoomCode code={params.id}/>
                 </div>
             </header>
@@ -100,7 +101,7 @@ export default function Room(){
 
                             </div>
                         ):(
-                            <span>Para enviar uma pergunta <button>faça seu login</button>.</span>
+                            <span>Para enviar uma pergunta <button onClick={signInWithGoogle}>faça seu login</button>.</span>
                         )}
                         <Button disabled={!user} type='submit'>Enviar pergunta</Button>
                     </div>

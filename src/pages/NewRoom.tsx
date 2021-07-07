@@ -8,8 +8,8 @@ import { database } from '../services/firebase';
 import { AuthContext } from '../context/AuthContext';
 
 export default function NewRoom(){
-    const[newRoom, setNewRoom] = useState<string>('')
-    const{user} = useContext(AuthContext);
+    const [newRoom, setNewRoom] = useState<string>('')
+    const {user} = useContext(AuthContext);
     const history = useHistory();
     const [liveCode, setLiveCode] = useState<string>('')
 
