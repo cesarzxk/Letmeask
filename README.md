@@ -48,18 +48,18 @@ This application was part of a challenge NLW:Together(Next Level Week) creating 
 
   
 <p align="center">
-<img alt="ScreenShot02" src="https://user-images.githubusercontent.com/43748428/124530370-c6a54780-dde2-11eb-9be1-ca8aa895ca95.png" width="400px">
-<img alt="ScreenShot01" src="https://user-images.githubusercontent.com/43748428/124530309-a8d7e280-dde2-11eb-9b69-67c83789ee8d.png" width="400px">
+  <img alt="ScreenShot02" src="https://user-images.githubusercontent.com/43748428/124530370-c6a54780-dde2-11eb-9be1-ca8aa895ca95.png" width="400px">
+  <img alt="ScreenShot01" src="https://user-images.githubusercontent.com/43748428/124530309-a8d7e280-dde2-11eb-9b69-67c83789ee8d.png" width="400px">
 </p>
 
 <p align="center">
-<img alt="ScreenShot03" src="https://user-images.githubusercontent.com/43748428/124530387-cf961900-dde2-11eb-9b5c-99e0edd3094b.png" width="400px">
-<img alt="ScreenShot04" src="https://user-images.githubusercontent.com/43748428/124530393-d15fdc80-dde2-11eb-991c-7dacf1c853c8.png" width="400px">
+  <img alt="ScreenShot03" src="https://user-images.githubusercontent.com/43748428/124530387-cf961900-dde2-11eb-9b5c-99e0edd3094b.png" width="400px">
+  <img alt="ScreenShot04" src="https://user-images.githubusercontent.com/43748428/124530393-d15fdc80-dde2-11eb-991c-7dacf1c853c8.png" width="400px">
 </p>
 
 <p align="center">
-<img alt="ScreenShot05" src="https://user-images.githubusercontent.com/43748428/124530400-d3c23680-dde2-11eb-8706-674a8670a761.png" width="400px">
-<img alt="ScreenShot06" src="https://user-images.githubusercontent.com/43748428/124530406-d58bfa00-dde2-11eb-853d-9855e2258140.png" width="400px">
+  <img alt="ScreenShot05" src="https://user-images.githubusercontent.com/43748428/124530400-d3c23680-dde2-11eb-8706-674a8670a761.png" width="400px">
+  <img alt="ScreenShot06" src="https://user-images.githubusercontent.com/43748428/124530406-d58bfa00-dde2-11eb-853d-9855e2258140.png" width="400px">
 </p>
 
 
